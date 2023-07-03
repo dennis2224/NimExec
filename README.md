@@ -5,9 +5,6 @@ NimExec needs an NTLM hash to authenticate to the target machine and then comple
 
 Since all required network packages are manually crafted and no operating system-specific functions are used, NimExec can be used in different operating systems by using Nim's cross-compilability support.
 
-This project was inspired by [Julio's SharpNoPSExec](https://github.com/juliourena/SharpNoPSExec) tool. You can think that NimExec is Cross Compilable and built-in Pass the Hash supported version of SharpNoPSExec. Also, I learned the required network packet structures from [Kevin Robertson's Invoke-SMBExec Script](https://github.com/Kevin-Robertson/Invoke-TheHash/blob/master/Invoke-SMBExec.ps1).
-
-
 # Compilation
 ```
 nim c -d:release --gc:markAndSweep -o:NimExec.exe Main.nim
@@ -78,10 +75,4 @@ It's tested against Windows 10&11, Windows Server 16&19&22 from Ubuntu 20.04 and
 
 ```
 
-# References
 
-- https://github.com/juliourena/SharpNoPSExec
-- https://github.com/Kevin-Robertson/Invoke-TheHash/blob/master/Invoke-SMBExec.ps1
-- https://winprotocoldoc.blob.core.windows.net/productionwindowsarchives/MS-SCMR/%5bMS-SCMR%5d.pdf
-- https://github.com/jborean93/pypsexec/tree/master
-- https://www.x86matthew.com/view_post?id=create_svc_rpc
